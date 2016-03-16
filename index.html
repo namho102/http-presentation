@@ -37,6 +37,7 @@
             <section>
                 <section>
                     <h1>What is HTTP?</h1>
+                    <img src="imgs/surf_internet.gif" alt="">
                 </section>
                 <section>
                     <p>The Hypertext Transfer Protocol (HTTP) is an application protocol for distributed, collaborative, hypermedia information systems. <i>HTTP is the foundation of data communication for the World Wide Web.</i></p>
@@ -47,7 +48,7 @@
                 		<li>HTTP is an "application layer" protocol.</li>
                 		<li>HTTP follows a classical "client-server" model</li>
                 		<li>HTTP is a TCP/IP based communication protocol</li>
-                		<li>The standard port for HTTP connections is port 80.</li>
+                		<li>The standard port for HTTP connections is port 80</li>
                 		<li>The version of HTTP in common use is HTTP/1.1</li>
                 		<li><a href="https://http2.akamai.com/demo">HTTP/2 was published in May 2015</a></li>
 
@@ -57,11 +58,13 @@
             <section>
             	<section>
             		<h1>Resources</h1>
+            		<img src="imgs/traffic.gif" alt="">
             	</section>
 
 				<section>
 					<p>
             			HTTP is used to transmit resources. A resource is some chunk of information that can be identified by a URL (it's the R in URL). The most common kind of resource is a file, but a resource may also be a dynamically-generated query result, the output of a CGI script, a document that is available in several languages, or something else.
+            		</p>	
 				</section>
 				<section>
 					<img src="imgs/resource.png" alt="">
@@ -72,41 +75,118 @@
             	</section>
 				            	
             </section>
+			
+			<section>
+				<section>
+	                <h1>Transaction</h1>
+	                <img src="imgs/http1.jpg" alt="">
+	            </section>
 
-            <section>
-                <h2>Hello There</h2>
-                <img src="imgs/http1.jpg" alt="">
-            </section>
-            <!-- Example of nested vertical slides -->
-            <section>
-                <section>
-                    <h2>Vertical Slides</h2>
-                    <p>Slides can be nested inside of each other.</p>
-                    <p>Use the <em>Space</em> key to navigate through all slides.</p>
-                    <br>
-                    <a href="#" class="navigate-down">
-                        <img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-                    </a>
-                </section>
-                <section>
-                    <h2>Basement Level 1</h2>
-                    <p>Nested slides are useful for adding additional detail underneath a high level horizontal slide.</p>
-                </section>
-                <section>
-                    <h2>Basement Level 2</h2>
-                    <p>That's it, time to go back up.</p>
-                    <br>
-                    <a href="#/2">
-                        <img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="transform: rotate(180deg); -webkit-transform: rotate(180deg);">
-                    </a>
-                </section>
-            </section>
-            <section>
-                <h2>Slides</h2>
+	            <section>
+					<p>HTTP session consists of three phases:</p>
+					<ol>
+						<li>The client establishes a TCP connection (or the appropriate connection if the transport layer is not TCP).</li>
+						<li>The client sends its request and then waits for the answer.</li>
+						<li>The server processes the request and sends back its answer, containing a status code and the appropriate data.</li>
+						<li>The connection is closed (It's still opened starting with HTTP/1.1)</li>
+					</ol>					
+				</section>
+
+				<section>
+					<h3>Methods</h3>
+	                <table class="my-table">
+	                    <thead>
+	                        <tr>
+	                            <th>Method</th>
+	                            <th>Description</th>
+	                            <!-- <th>Message body?</th> -->
+	                        </tr>
+	                    </thead>
+	                    <tbody>
+	                        <tr>
+	                            <td>GET</td>
+	                            <td>Retrieve information from the server.</td>
+	                            <!-- <td>No</td> -->
+	                        </tr>
+	                        <tr>
+	                            <td>HEAD</td>
+	                            <td>Same as GET, but transfers the status line and header section only.</td>
+	                        	<!-- <td>No</td> -->
+	                        </tr>
+	                        <tr>
+	                            <td>POST</td>
+	                            <td>Send data to the server for processing.</td>
+	                            <!-- <td>Yes</td> -->
+	                        </tr>
+	                        <tr>
+	                        	<td>PUT</td>
+	                        	<td>Store the body of the request on the server.</td>
+	                        	<!-- <td>Yes</td> -->
+	                        </tr>
+	                        <tr>
+	                        	<td>DELETE</td>
+	                        	<td>Remove a document from the server.</td>
+	                        	<!-- <td>No</td> -->
+	                        </tr>
+	                        <tr>
+	                        	<td>TRACE</td>
+	                        	<td>Trace the message through proxy servers to the server.</td>
+	                        	<!-- <td>No</td> -->
+	                        </tr>
+	                        <tr>
+	                        	<td>OPTION</td>
+	                        	<td>Determine what methods can operate on a server.</td>
+	                        	<!-- <td>No</td> -->
+	                        </tr>
+	                        <tr>
+	                        	<td>CONNECT</td>
+	                        	<td>Converts the request connection to a transparent TCP/IP tunnel.</td>
+	                        	<!-- <td>No</td> -->
+	                        </tr>
+	                        <tr>
+	                        	<td>PATCH</td>
+	                        	<td>Applies partial modifications to a resource</td>
+	                        	<!-- <td>Yes</td> -->
+	                        </tr>
+	                    </tbody>
+	                </table>
+				</section>
+			</section>
+
+
+            <section id="themes">
+                <h2>Themes</h2>
                 <p>
-                    Not a coder? Not a problem. There's a fully-featured visual editor for authoring these, try it out at <a href="http://slides.com" target="_blank">http://slides.com</a>.
+                    <!-- Hacks to swap themes after the page has loaded. Not flexible and only intended for the reveal.js demo deck. -->
+                    <a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/black.css'); return false;">Black (default)</a> -
+                    <a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/white.css'); return false;">White</a> -
+                    <a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/league.css'); return false;">League</a> -
+                    <a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/sky.css'); return false;">Sky</a> -
+                    <a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/beige.css'); return false;">Beige</a> -
+                    <a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/simple.css'); return false;">Simple</a>
+                    <br>
+                    <a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/serif.css'); return false;">Serif</a> -
+                    <a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/blood.css'); return false;">Blood</a> -
+                    <a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/night.css'); return false;">Night</a> -
+                    <a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/moon.css'); return false;">Moon</a> -
+                    <a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/solarized.css'); return false;">Solarized</a>
                 </p>
             </section>
+			
+			<section id="transitions">
+                <h2>Transition Styles</h2>
+                <p>
+                    You can select from different transitions, like:
+                    <br>
+                    <a href="?transition=none#/transitions">None</a> -
+                    <a href="?transition=fade#/transitions">Fade</a> -
+                    <a href="?transition=slide#/transitions">Slide</a> -
+                    <a href="?transition=convex#/transitions">Convex</a> -
+                    <a href="?transition=concave#/transitions">Concave</a> -
+                    <a href="?transition=zoom#/transitions">Zoom</a>
+                </p>
+            </section>	
+            
             <section>
                 <h2>Point of View</h2>
                 <p>
@@ -116,21 +196,8 @@
                     Hold down alt and click on any element to zoom in on it using <a href="http://lab.hakim.se/zoom-js">zoom.js</a>. Alt + click anywhere to zoom back out.
                 </p>
             </section>
-            <section>
-                <h2>Touch Optimized</h2>
-                <p>
-                    Presentations look great on touch devices, like mobile phones and tablets. Simply swipe through your slides.
-                </p>
-            </section>
-            <section data-markdown>
-                <script type="text/template">
-                    ## Markdown support Write content using inline or external Markdown. Instructions and more info available in the [readme](https://github.com/hakimel/reveal.js#markdown). ```
-                    <section data-markdown>
-                        ## Markdown support Write content using inline or external Markdown. Instructions and more info available in the [readme](https://github.com/hakimel/reveal.js#markdown).
-                    </section>
-                    ```
-                </script>
-            </section>
+
+
             <section>
                 <section id="fragments">
                     <h2>Fragments</h2>
@@ -152,39 +219,8 @@
                     <p class="fragment highlight-blue">highlight-blue</p>
                 </section>
             </section>
-            <section id="transitions">
-                <h2>Transition Styles</h2>
-                <p>
-                    You can select from different transitions, like:
-                    <br>
-                    <a href="?transition=none#/transitions">None</a> -
-                    <a href="?transition=fade#/transitions">Fade</a> -
-                    <a href="?transition=slide#/transitions">Slide</a> -
-                    <a href="?transition=convex#/transitions">Convex</a> -
-                    <a href="?transition=concave#/transitions">Concave</a> -
-                    <a href="?transition=zoom#/transitions">Zoom</a>
-                </p>
-            </section>
-            <section id="themes">
-                <h2>Themes</h2>
-                <p>
-                    reveal.js comes with a few themes built in:
-                    <br>
-                    <!-- Hacks to swap themes after the page has loaded. Not flexible and only intended for the reveal.js demo deck. -->
-                    <a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/black.css'); return false;">Black (default)</a> -
-                    <a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/white.css'); return false;">White</a> -
-                    <a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/league.css'); return false;">League</a> -
-                    <a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/sky.css'); return false;">Sky</a> -
-                    <a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/beige.css'); return false;">Beige</a> -
-                    <a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/simple.css'); return false;">Simple</a>
-                    <br>
-                    <a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/serif.css'); return false;">Serif</a> -
-                    <a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/blood.css'); return false;">Blood</a> -
-                    <a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/night.css'); return false;">Night</a> -
-                    <a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/moon.css'); return false;">Moon</a> -
-                    <a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/solarized.css'); return false;">Solarized</a>
-                </p>
-            </section>
+            
+            
             <section>
                 <section data-background="#dddddd">
                     <h2>Slide Backgrounds</h2>
@@ -247,63 +283,7 @@ function linkify( selector ) {
 					</code></pre>
                 <p>Code syntax highlighting courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.</p>
             </section>
-            <section>
-                <h2>Marvelous List</h2>
-                <ul>
-                    <li>No order here</li>
-                    <li>Or here</li>
-                    <li>Or here</li>
-                    <li>Or here</li>
-                </ul>
-            </section>
-            <section>
-                <h2>Fantastic Ordered List</h2>
-                <ol>
-                    <li>One is smaller than...</li>
-                    <li>Two is smaller than...</li>
-                    <li>Three!</li>
-                </ol>
-            </section>
-            <section>
-                <h2>Tabular Tables</h2>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Item</th>
-                            <th>Value</th>
-                            <th>Quantity</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Apples</td>
-                            <td>$1</td>
-                            <td>7</td>
-                        </tr>
-                        <tr>
-                            <td>Lemonade</td>
-                            <td>$2</td>
-                            <td>18</td>
-                        </tr>
-                        <tr>
-                            <td>Bread</td>
-                            <td>$3</td>
-                            <td>2</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </section>
-            <section>
-                <h2>Clever Quotes</h2>
-                <p>
-                    These guys come in two forms, inline:
-                    <q cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-                        &ldquo;The nice thing about standards is that there are so many to choose from&rdquo;</q> and block:
-                </p>
-                <blockquote cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-                    &ldquo;For years there has been a theory that millions of monkeys typing at random on millions of typewriters would reproduce the entire works of Shakespeare. The Internet has proven this theory to be untrue.&rdquo;
-                </blockquote>
-            </section>
+            
             <section>
                 <h2>Intergalactic Interconnections</h2>
                 <p>

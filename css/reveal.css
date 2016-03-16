@@ -33,6 +33,15 @@ html, body, .reveal div, .reveal span, .reveal applet, .reveal object, .reveal i
   display: block; }
 
 /*********************************************
+ * MY STYLES
+ *********************************************/
+
+.my-table {
+  font-size: 0.7em !important;
+}
+
+
+/*********************************************
  * GLOBAL STYLES
  *********************************************/
 html,
