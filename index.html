@@ -91,10 +91,17 @@
 						<li>The connection is closed (It's still opened starting with HTTP/1.1)</li>
 					</ol>					
 				</section>
+			</section>
 
+			<section>
 				<section>
 					<h3>Methods</h3>
-	                <table class="my-table">
+					<p>HTTP supports several different request commands, called HTTP methods. Every
+					HTTP request message has a method. The method tells the server what action to perform.</p>
+				</section>
+				
+				<section>
+					<table class="my-table">
 	                    <thead>
 	                        <tr>
 	                            <th>Method</th>
@@ -151,8 +158,85 @@
 	                    </tbody>
 	                </table>
 				</section>
+                
+                <section>
+                	<h3>CRUD</h3>
+                	<table>
+                		<tr>
+                			<td>Create</td>
+                			<td>POST /books</td>
+                		</tr>
+                		<tr>
+                			<td>Read</td>
+                			<td>GET /books</td>
+                		</tr>
+                		<tr>
+                			<td>Update</td>
+                			<td>PUT /books/:id</td>
+                		</tr>
+                		<tr>
+                			<td>Delete</td>
+                			<td>DELETE /books/:id</td>
+                		</tr>
+                	</table>
+                </section>
 			</section>
 
+			<section>
+				<section>
+					<h3>Status Codes</h3>
+
+					<table>
+
+						<tr>
+							<td><a href="https://httpstatuses.com/">1xx	</a></td>
+							<td>Informational</td>
+						</tr>
+						<tr>
+							<td><a href="https://httpstatuses.com/">2xx</a></td>
+							<td>Success</td>
+						</tr>
+						<tr>
+							<td><a href="https://httpstatuses.com/">3xx</a></td>
+							<td>Redirection</td>
+						</tr>
+						<tr>
+							<td><a href="https://httpstatuses.com/">4xx</a></td>
+							<td>Client Error</td>
+						</tr>
+						<tr>
+							<td><a href="https://httpstatuses.com/">5xx</a></td>
+							<td>Server Error</td>
+						</tr>
+					</table>
+				</section>
+
+				<section><img src="imgs/200.jpg" alt=""></section>
+				<section><img src="imgs/301.jpg" alt=""></section>
+				<section><img src="imgs/400.jpg" alt=""></section>
+				<section><img src="imgs/404.jpg" alt=""></section>
+				<section><img src="imgs/500.jpg" alt=""></section>
+				<section><img src="imgs/503.jpg" alt=""></section>
+			</section>
+			
+			<section>
+				<section>
+					<h3>Messages</h3>
+					<img src="imgs/XPQlr0QXX291A7SyScZMb1ZKU.jpg" alt="">
+				</section>
+
+				<section>
+					<!-- <h3>HTTP messages consist of three parts:</h3> -->
+					<p>The message format consists of the following four items.</p>
+					<ul>
+						<li>A Start-line</li>
+						<li>Zero or more header fields followed by CRLF</li>
+						<li>An empty line (i.e., a line with nothing preceding the CRLF) 
+							indicating the end of the header fields</li>
+						<li>Optionally a message-body</li>
+					</ul>
+				</section>
+			</section>	
 
             <section id="themes">
                 <h2>Themes</h2>
