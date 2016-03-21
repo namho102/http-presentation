@@ -229,15 +229,47 @@
 					<!-- <h3>HTTP messages consist of three parts:</h3> -->
 					<p>The message format consists of the following four items.</p>
 					<ul>
-						<li>A Start-line</li>
-						<li>Zero or more header fields followed by CRLF</li>
-						<li>An empty line (i.e., a line with nothing preceding the CRLF) 
-							indicating the end of the header fields</li>
-						<li>Optionally a message-body</li>
+						<li>Start-line</li>
+						<li>Header Fields</li>
+						<li>Message Body</li>
 					</ul>
 				</section>
-			</section>	
 
+                <section>
+                    <h3>Start Lines</h3>
+                    <p class="small-text">All HTTP messages begin with a start line. The start line for a request message says
+                    <i>what to do</i>. The start line for a response message says <i>what happened.</i></p>
+                    <pre><code>GET /hello.htm HTTP/1.1     (This is Request-Line sent by the client)
+HTTP/1.1 200 OK             (This is Status-Line sent by the server)</code></pre>
+                </section>
+
+                <section>
+                    <h3>Headers</h3>
+                    <pre><code>message-header = field-name ":" [ field-value ]</code></pre>
+                    <p class="smaller-text">HTTP message headers are used to precisely describe the resource being fetched or the behavior of the server or the client. There are four types of HTTP message headers:</p>
+                    <ul class="smaller-text">
+                        <li><a href="">General headers</a> have general applicability for both request and response messages.</li>
+                        <li><a href="">Request headers</a> provide more information about the request.</li>
+                        <li><a href="">Response headers</a> provide more information about the request.</li>
+                        <li><a href="">Entity headers</a> define meta information about the entity-body or, if no body is present, about the resource identified by the request.</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h3>Body</h3>
+                  <!--   <pre><code><h1>Hello World</h1></code></pre> -->
+                    <p class="small-text">The message-body (if any) of an HTTP message is used to carry the entity-body associated with the request or response. The message-body differs from the entity-body only when a transfer-coding has been applied, as indicated by the Transfer-Encoding header field</p>
+                    
+                    
+                    
+                </section>
+
+                <section>
+                    <h3>Example</h3>
+                    <pre><code>curl -v -i https://www.facebook.com/namdeptrai</code></pre>
+                </section>
+			</section>	
+    
             <section id="themes">
                 <h2>Themes</h2>
                 <p>
