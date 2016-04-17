@@ -296,7 +296,104 @@ HTTP/1.1 200 OK             (This is Status-Line sent by the server)</code></pre
                     <h1>HTTPS</h1>
                     <img src="imgs/coding.gif" alt="" class="my-gif">
                 </section>
-            </section>    
+                <section>
+                    <p>HTTPS (also called HTTP over TLS, HTTP over SSL, and HTTP Secure) is a protocol for secure communication over a computer network which is widely used on the Internet. HTTPS consists of communication over Hypertext Transfer Protocol (HTTP) within a connection encrypted by TLS or SSL</p>
+                </section>
+                <section>
+                    <p>That is the more secure HTTPS support, can solve the problem of sending and receiving information on our Internet leak. HTTPS is often used in cases of login, registration, payment, card payment. They are sensitive information should be protected</p>
+                </section>
+                <section>
+                    <ul class="small-text">
+                        <li>SSL stands for Secure Socket Layer, is a technology platform that uses the HTTPS protocol to ensure content is encrypted secure HTTP.</li>
+                        <li>Technology security standards globally creates a link is encrypted between the browser and the web server.</li>
+                        <li>This link ensures that all data exchanged between browser and web server is always secure and safe. SSL ensures that all data passed between the web server and the browser is private separated.</li>
+                    </ul>
+                </section>
+            </section>
+
+            <section>
+                <section>
+                    <h3>Difference from HTTP</h3>
+                  
+                    
+                    <img src="imgs/http-vs-https.png" alt="">
+                </section>
+                <section>
+                      <ul class="small-text">
+                        <li>HTTPS URLs begin with "https://" and use port 443 by default, whereas HTTP URLs begin with "http://" and use port 80 by default.</li>
+                        <li>HTTP is not encrypted and is vulnerable to man-in-the-middle and eavesdropping attacks, which can let attackers gain access to website accounts and sensitive information, and modify webpages to inject malware or advertisements.</li>
+                        <li>HTTPS is designed to withstand such attacks and is considered secure against them (with the exception of older, deprecated versions of SSL).</li>
+                    </ul>
+                </section>
+
+            </section>
+        
+            <section>
+                <section>
+                    <h3>Working in HTTPS</h3>
+                    
+                    <img src="imgs/https2.jpg" alt="">
+                </section>
+                <section>
+                    <ul class="small-text">
+                        <li>Web browsers know how to trust HTTPS websites based on certificate authorities that come pre-installed in their software. Certificate authorities (such as Symantec(verisign), Comodo, GoDaddy and GlobalSign) are in this way being trusted by web browser creators to provide valid certificates.</li>
+                        <li>HTTPS is also very important for connections over the Tor anonymity network, as malicious Tor nodes can damage or alter the contents passing through them in an insecure fashion and inject malware into the connection. </li>
+                        <li>This is one reason why the Electronic Frontier Foundation and the Tor project started the development of HTTPS Everywhere,which is included in the Tor Browser Bundle.</li>
+                    </ul>
+
+                </section>
+            </section>
+
+            <section>
+                <section>
+                    <h3>Network layer</h3>
+                    <p class="small-text">
+                        HTTP operates at the highest layer of the TCP/IP model, the Application layer; as does the TLS security protocol ,which encrypts an HTTP message prior to transmission and decrypts a message upon arrival. 
+
+                        HTTPS is not a separate protocol, but refers to use of ordinary HTTP over an encrypted SSL/TLS connection.
+                    </p>
+                </section>
+
+                <section>
+                    <p class="small-text">
+                        Everything in the HTTPS message is encrypted, including the headers, and the request/response load. 
+                        The attacker can only know that a connection is taking place between the two parties and their domain names and IP addresses.
+                    </p>
+                    <p class="small-text">For example, Google’s search engine now defaults to HTTPS connections. This means that people can’t see what you’re searching for on Google.com </p>
+                </section>
+                
+            </section>
+            
+            <section>
+                <section>
+                    <h3>Server Setup</h3>
+                       <p class="small-text"> To prepare a web server to accept HTTPS connections, the administrator must create a “public key” certificate for the web server. This certificate must be signed by a trusted certificate authority for the web browser to accept it without warning</p>
+                </section>           
+            </section> 
+
+           <section>
+               <section>
+                    <h3>Acquiring certificates</h3>
+    
+               </section>
+                <section>
+                    <img src="imgs/https3.jpg" alt="">
+                </section>
+                <section>
+                    <img src="imgs/https4.jpg" alt="">
+                </section>
+                <section>
+                    <img src="imgs/https5.jpg" alt="">
+                </section>
+                <section>
+                    <img src="imgs/https6.jpg" alt="">
+                </section>        
+           </section>
+
+                   
+              <section>
+                  
+              </section>    
             <section id="themes">
                 <h2>Themes</h2>
                 <p>
